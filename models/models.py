@@ -14,7 +14,7 @@ class database_backup(models.TransientModel):
         backup_path = '/opt/odoo17/odoo17-custom-addons'
         filename = f"{db_name}.dump"
         complete_path = os.path.join(backup_path, filename)
-        db_user = 'odoo'  # Specify the PostgreSQL user that has access to the database
+        db_user = 'odoo17'  # Specify the PostgreSQL user that has access to the database
 
         # Construct the pg_dump command with user authentication
         command = f"pg_dump -U {db_user} -d {db_name} -F c > {complete_path}"
