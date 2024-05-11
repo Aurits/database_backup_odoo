@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="database_backup.list">
+      <field name="name">database_backup list</field>
+      <field name="model">database_backup.database_backup</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="database_backup.action_window">
+      <field name="name">database_backup window</field>
+      <field name="res_model">database_backup.database_backup</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="database_backup.action_server">
+      <field name="name">database_backup server</field>
+      <field name="model_id" ref="model_database_backup_database_backup"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="database_backup" id="database_backup.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="database_backup.menu_1" parent="database_backup.menu_root"/>
+    <menuitem name="Menu 2" id="database_backup.menu_2" parent="database_backup.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="database_backup.menu_1_list" parent="database_backup.menu_1"
+              action="database_backup.action_window"/>
+    <menuitem name="Server to list" id="database_backup" parent="database_backup.menu_2"
+              action="database_backup.action_server"/>
+-->
+  </data>
+</odoo>
