@@ -11,7 +11,7 @@ class database_backup(models.TransientModel):
 
     def backup_db(self):
         db_name = self.env.cr.dbname
-        backup_path = '/home/aurit/Projects/odoo-17.0/BACKUP'
+        backup_path = '/opt/odoo17/odoo17-custom-addons'
         filename = f"{db_name}.dump"
         complete_path = os.path.join(backup_path, filename)
         db_user = 'odoo'  # Specify the PostgreSQL user that has access to the database
